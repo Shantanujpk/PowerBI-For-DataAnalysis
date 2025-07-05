@@ -1,0 +1,45 @@
+🧠 Step 1: Data Understanding
+Before visualizing, it’s crucial to understand and assess your dataset.
+
+✅ Example Datasets Used in This Chapter:
+Basic Food Delivery App Data
+➤ A simple Excel file.
+
+Detailed Food Delivery Data
+➤ An Excel file containing:
+
+Food name
+
+Who ordered it
+
+Member type
+
+Restaurant details, etc.
+🔹 Note: This dataset is already normalized, so no normalization is needed.
+
+🔍 What to Check in This Step:
+Null or blank values
+
+Missing records
+
+Data type mismatches (e.g., numbers stored as text)
+
+Text inconsistencies (e.g., capitalization)
+
+Correct column headers
+-------------------------------------------------------------------------------------------------
+🔄 Step 2: Data Transformation Using ETL (Power Query)
+Power BI includes Power Query, a built-in ETL (Extract, Transform, Load) tool that lets you:
+
+Clean data
+
+Format columns
+
+Apply filters and transformations dynamically
+
+🔔 Important Note:
+If no data cleaning is needed, you can directly Load the data.
+
+If data needs checking or cleaning, click Transform Data to open Power Query and perform ETL operations.
+
+More about this in next chapter
