@@ -1,0 +1,24 @@
+In this chapter we will be learning,
+
+1) Import data in powerBI
+2) To Load it directly or not - If the data is clean it can be directly loaded in the powerBI or else transform it
+	In this case we have imported the data from Excel file (single file)
+3) In this chapter we will be transforming it using power query 
+	- Will replace values using replace function in power query 
+
+In Conclusion we learned simple ETL
+
+E - Extracted from excel
+T - Transformed it in the power query (In this case replaced wrong values with correct value)(Here we have used advanced option - Match entire cell content)
+L - Loaded the transformed value in the PowerBI
+
+Once the use of powerQury is done, close it by using apply and close 
+
+
+Important : 
+
+Difference between Import and Direct Query
+
+Import is useful when data is below or equal to 1 GB and want to load the data directly in PowerBI
+
+Direct Query is useful when the data is more that 1 GB and can not be loaded in the PowerBI , so it is used directly from server.
