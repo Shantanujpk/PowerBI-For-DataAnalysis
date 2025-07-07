@@ -1,0 +1,52 @@
+Chapter: Loading and Transforming Data from a Folder in Power BI
+🎯 Objective:
+Learn how to load multiple Excel files from a folder and clean them using Power Query before importing into Power BI.
+
+🔁 Where It Fits in ETL:
+Stage	Description
+E – Extract	Get data from a folder containing multiple Excel files
+T – Transform	Clean, format, and standardize the data using Power Query
+L – Load	Load the final clean data into Power BI for reporting
+
+🧩 Steps to Follow in Power BI:
+✅ 1. Get Data → More → Folder
+In Power BI, click on "Get Data"
+Choose "Folder"
+Browse to select the folder path containing your monthly Excel files
+🔸 Don’t click “Load” right away!
+
+✅ 2. Click “Transform Data” Instead
+This opens Power Query Editor, where the transformation (T in ETL) happens.
+🛠 Power Query Steps:
+📦 Step 1: Keep Only Binary Column
+Remove other columns like Name, Date accessed, etc.
+Keep just the Content column (contains binary files)
+📦 Step 2: Add Custom Column
+Go to “Add Column” → “Custom Column”
+Use this formula:
+Excel.Workbook([Content])
+This extracts the Excel table structure from each binary file.
+📦 Step 3: Clean the Output
+Remove the original Content column
+Expand the new column to extract the actual tables
+Remove extra columns (like Item, Kind, Hidden, etc.)
+📦 Step 4: Promote First Row to Header
+Go to Home tab → Use First Row as Headers
+Since each Excel file might repeat headers, this can cause errors
+🧼 Step 5: Remove Errors
+Hover over the column with errors (likely in the first row)
+Click on “Remove Errors” to keep only valid data rows
+
+
+✅ 6. Load Final Data
+Once data is clean and standardized, click “Close & Load”
+Your data is now in Power BI and ready for visual analysis
+📚 Why This is Important for Interviews
+🔹 Power Query is the heart of data transformation in Power BI.
+It handles ETL without code
+Ideal for working with inconsistent Excel files
+Efficient for automating monthly data imports
+
+🧠 Interview Tip: What to Say if Asked
+“In one of my projects, I had to load monthly Excel reports from a shared folder. Using Power Query, I automated the data extraction by applying transformations like extracting binary content, promoting headers, and removing repeated headers across files. This saved hours of manual cleanup and enabled consistent reporting.”
+
